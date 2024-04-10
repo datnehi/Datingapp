@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ARoLZB6cy4l1EJvlu021Xgh4rA0CIo/OTKqIJJ/as9K8h0ZdiUOKasd0rUiyKznYdHwoEnXBPQH7VMnBu448bw==",
+  "dgSpecHash": "WwxZdO0JIcC5vrS8k8BQXg/+Z+wIsw6OlXeec8ItV53aL+OAyX2mDx3oQVYsGDaLD7mfvARFVQxSAyuorMiTkA==",
   "success": true,
-  "projectFilePath": "D:\\Datingapp\\API\\API.csproj",
+  "projectFilePath": "D:\\Datingapp\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell Inc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Dell Inc\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
