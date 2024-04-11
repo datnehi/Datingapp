@@ -160,3 +160,4 @@ D:\Datingapp\API\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
 D:\Datingapp\API\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Datingapp\API\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\Datingapp\API\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\Datingapp\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
