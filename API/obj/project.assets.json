@@ -4587,11 +4587,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Datingapp\\api\\API.csproj",
+      "projectUniqueName": "D:\\Datingapp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\Datingapp\\api\\API.csproj",
+      "projectPath": "D:\\Datingapp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Dell Inc\\.nuget\\packages\\",
-      "outputPath": "D:\\Datingapp\\api\\obj\\",
+      "outputPath": "D:\\Datingapp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell Inc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4681,7 +4681,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
