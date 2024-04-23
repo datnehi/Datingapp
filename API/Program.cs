@@ -1,5 +1,6 @@
 
 using API.Extensions;
+using API.Middleware;
 
 
 
@@ -17,11 +18,8 @@ builder.Services.AddCors();
 builder.Services.AddIdentityServices(config);
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-    
-}
+app.UseMiddleware<ExceptionMiddleware>();
+
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
