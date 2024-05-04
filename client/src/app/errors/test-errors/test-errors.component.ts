@@ -9,48 +9,48 @@ import { Component } from '@angular/core';
 export class TestErrorsComponent {
   baseUrl = 'https://localhost:5001/api/';
   validationErrors: string[] = [];
-  constructor(private http: HttpClient){};
-  get404Error(){
+  constructor(private http: HttpClient) { };
+  get404Error() {
     this.http.get(this.baseUrl + 'buggy/not-found').subscribe({
       next: response => {
         console.log(response);
       },
       error: error => {
         console.log(error);
-      } 
+      }
     })
   }
-  get400Error(){
+  get400Error() {
     this.http.get(this.baseUrl + 'buggy/bad-request').subscribe({
       next: response => {
         console.log(response);
       },
       error: error => {
         console.log(error);
-      } 
+      }
     })
   }
-  get500Error(){
+  get500Error() {
     this.http.get(this.baseUrl + 'buggy/server-error').subscribe({
       next: response => {
         console.log(response);
       },
       error: error => {
         console.log(error);
-      } 
+      }
     })
   }
-  get401Error(){
+  get401Error() {
     this.http.get(this.baseUrl + 'buggy/auth').subscribe({
       next: response => {
         console.log(response);
       },
       error: error => {
         console.log(error);
-      } 
+      }
     })
   }
-  get400ValidationError(){
+  get400ValidationError() {
     this.http.post(this.baseUrl + 'account/register', {}).subscribe({
       next: response => {
         console.log(response);
@@ -58,7 +58,7 @@ export class TestErrorsComponent {
       error: error => {
         console.log(error);
         this.validationErrors = error;
-      } 
+      }
     })
   }
 }
