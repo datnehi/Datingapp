@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bx2W0ZgKH/kQxGcx2KEpLv+CfQ9VbWFIkV/a+s9CPJONzMpXYOfQPGquSYTjq30gM3kwJGe9gD3kjO3/qWr/cQ==",
+  "dgSpecHash": "E/8rYY7BNfoFeyOLRW0hkSUrOPNmNw+07Kklkd+jvVGpWnAiTnx9lOr3M0uwB9RaWzWGpYpCknCvKQoynAi4+g==",
   "success": true,
-  "projectFilePath": "D:\\Datingapp\\api\\API.csproj",
+  "projectFilePath": "D:\\Datingapp\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell Inc\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Dell Inc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
