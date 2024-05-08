@@ -164,3 +164,5 @@ D:\Datingapp\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.
 D:\Datingapp\api\bin\Debug\net8.0\Data\UserSeedData.json
 D:\Datingapp\api\bin\Debug\net8.0\AutoMapper.dll
 D:\Datingapp\api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Datingapp\api\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\Datingapp\api\bin\Debug\net8.0\Newtonsoft.Json.dll

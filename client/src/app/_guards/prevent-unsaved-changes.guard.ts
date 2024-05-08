@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class preventUnsavedChangesGuard implements CanDeactivate<unknown> {
   canDeactivate(component: MemberEditComponent): boolean {
-    if(component.editForm.dirty){
+    if(component.editForm && component.editForm.dirty){
       return confirm('Are you sure you want to continue? Any unsaved changes will be lost');
     }
     return true;
