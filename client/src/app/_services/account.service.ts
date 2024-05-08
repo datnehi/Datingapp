@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ReplaySubject, map } from 'rxjs';
+import { ReplaySubject, map, tap } from 'rxjs';
 import { User } from '../_models/user';
 import { environment } from 'src/environments/environment';
 
@@ -21,7 +21,7 @@ export class AccountService {
         if (user) {
           this.setCurrentUser(user);
         }
-        return user;
+        return response;
       })
     );
   }
@@ -31,7 +31,6 @@ export class AccountService {
         if (user) {          
           this.setCurrentUser(user);
         }
-        return user;
       })
     );
   }
