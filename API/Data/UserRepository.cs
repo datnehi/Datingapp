@@ -22,11 +22,25 @@ namespace API.Data
 
         public async Task<MemberDto> GetMemberAsync(string username)
         {
-            return await _context.Users
+            var memberDto = await _context.Users
                 .Where(x => x.UserName == username)
                 .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
                 .SingleOrDefaultAsync();
+
+            if (memberDto != null)
+            {
+                // Kiểm tra xem giá trị "Introduction" có là null không
+                if (string.IsNullOrEmpty(memberDto.Introduction))
+                {
+                    // Gán giá trị "Introduction" thành "null"
+                    memberDto.Introduction = "null";
+                }
+            }
+
+            return memberDto;
         }
+
+
 
         public async Task<IEnumerable<MemberDto>> GetMembersAsync()
         {

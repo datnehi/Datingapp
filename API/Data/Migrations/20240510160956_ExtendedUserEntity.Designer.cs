@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240430160855_ExtendedUserEntity")]
+    [Migration("20240510160956_ExtendedUserEntity")]
     partial class ExtendedUserEntity
     {
         /// <inheritdoc />
@@ -27,40 +27,33 @@ namespace API.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Created")
+                    b.Property<DateTime?>("Created")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Gender")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Interests")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Introduction")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("KnownAs")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("LastActive")
+                    b.Property<DateTime?>("LastActive")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LookingFor")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<byte[]>("PasswordHash")
