@@ -25,7 +25,6 @@ namespace API.Data.Migrations
                 defaultValue: new byte[0]);
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(

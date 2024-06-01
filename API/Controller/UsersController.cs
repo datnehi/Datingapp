@@ -4,6 +4,7 @@ using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Extensions;
+using API.Helpers;
 using API.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -29,10 +30,22 @@ namespace API.Controller
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
         {
-            var users = await _userRepository.GetMembersAsync();
-            return Ok(users);
 
+            var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
+
+            var userParams = new UserParams
+            {
+                CurrentUsername = user.UserName,
+                Gender = string.IsNullOrEmpty(user.Gender) ? "female" : user.Gender
+
+            };
+
+            var users = await _userRepository.GetMembersAsync(userParams);
+            Response.AddPaginationHeader(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);
+
+            return Ok(users);
         }
+
 
         [HttpGet("{username}", Name = "GetUser")]
         public async Task<ActionResult<MemberDto>> GetUsers(string username)
@@ -80,9 +93,10 @@ namespace API.Controller
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
 
             var photo = user.Photos.FirstOrDefault(x => x.Id == photoId);
-            
+
             if (photo == null) return NotFound();
-            if (photo.IsMain == true) {
+            if (photo.IsMain == true)
+            {
                 return BadRequest("This is already your main photo");
             }
 
