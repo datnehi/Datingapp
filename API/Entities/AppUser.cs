@@ -33,5 +33,7 @@ namespace API.Entities
         public ICollection<Photo> Photos { set; get; }
         public ICollection<UserLike> LikedByUsers { set; get; }
         public ICollection<UserLike> LikedUsers { set; get; }
+        public ICollection<Message> MessagesSent { set; get; }
+        public ICollection<Message> MessagesReceived { set; get; }
     }
 }
