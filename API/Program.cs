@@ -3,6 +3,7 @@ using API.Data;
 using API.Entities;
 using API.Extensions;
 using API.Middleware;
+using API.SignalR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,17 +15,21 @@ builder.Services.AddSwaggerGen();
 IConfiguration config = builder.Configuration;
 
 builder.Services.AddApplicationServices(config);
-
 builder.Services.AddControllers();
 builder.Services.AddCors();
 builder.Services.AddIdentityServices(config);
+builder.Services.AddSignalR();
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 
 app.UseRouting();
 
-app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+app.UseCors(x => x.AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials()
+    .WithOrigins("https://localhost:4200"));
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -34,6 +39,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
+    endpoints.MapHub<PresenceHub>("hubs/presence");
 });
 
 using var scope = app.Services.CreateScope();
