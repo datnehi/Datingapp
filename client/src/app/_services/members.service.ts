@@ -16,7 +16,7 @@ export class MembersService {
   baseUrl = environment.apiUrl;
   members: Member[] = [];
   memberCache = new Map();
-  user!: User;
+  user?: User;
   userParams!: UserParams;
 
   constructor(private http: HttpClient, private accountService: AccountService) {
