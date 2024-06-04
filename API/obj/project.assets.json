@@ -7848,11 +7848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Datingapp\\API\\API.csproj",
+      "projectUniqueName": "D:\\Datingapp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "d:\\Datingapp\\API\\API.csproj",
+      "projectPath": "D:\\Datingapp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Dell Inc\\.nuget\\packages\\",
-      "outputPath": "d:\\Datingapp\\API\\obj\\",
+      "outputPath": "D:\\Datingapp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell Inc\\AppData\\Roaming\\NuGet\\NuGet.Config",

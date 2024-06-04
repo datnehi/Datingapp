@@ -40,6 +40,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
     endpoints.MapHub<PresenceHub>("hubs/presence");
+    endpoints.MapHub<MessageHub>("hubs/message");
 });
 
 using var scope = app.Services.CreateScope();
